@@ -5,7 +5,7 @@ export class Video {
     name: string;
     ratings: number[];
     _isRented: boolean;
-    timesRented: number;
+    
 
     constructor(name: string, rating: number) {
         this.name = name;
@@ -13,8 +13,6 @@ export class Video {
         this.user = "";
         this.ratings = [];
         this.ratings.push(rating)
-        
-        this.timesRented = 0;
     }
 
     get print() {
@@ -23,7 +21,6 @@ export class Video {
 
     rent(user: string) {
         this.user = user;
-        this.timesRented++;
     }
     get isRented() {
         return this.user !== "";
